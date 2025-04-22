@@ -17,11 +17,11 @@ public class Contador {
 		terminal.close();
 	}
 	static void contar(int parametroUm, int parametroDois ) throws ParametrosInvalidosException {
-		if (parametroUm >= parametroDois)
-			throw new ParametrosInvalidosException();
 		int contagem = parametroDois - parametroUm;
-		for (int contar = 1; contar <= contagem; contar++) {
+		for (int contar = 0; contar <= contagem; contar++) {
             System.out.println("Imprimindo numero " + contar);
         }
+		if (parametroUm > parametroDois)
+			throw new ParametrosInvalidosException();
 	}
 }
